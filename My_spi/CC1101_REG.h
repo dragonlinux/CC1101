@@ -1,11 +1,11 @@
 /*
-================================================================================
-Copyright   : Ebyte electronic co.,LTD
-Website     : http://yh-ebyte.taobao.com
-              http://yiheliyong.cn.alibaba.com
-Description : This module contains the low level operations for CC1101
-================================================================================
-*/
+ ================================================================================
+ Copyright   : Ebyte electronic co.,LTD
+ Website     : http://yh-ebyte.taobao.com
+ http://yiheliyong.cn.alibaba.com
+ Description : This module contains the low level operations for CC1101
+ ================================================================================
+ */
 #ifndef _CC1101_REH_H_
 #define _CC1101_REH_H_
 
@@ -58,22 +58,21 @@ Description : This module contains the low level operations for CC1101
 #define CCxxx0_TEST2        0x2C        // Various test settings
 #define CCxxx0_TEST1        0x2D        // Various test settings
 #define CCxxx0_TEST0        0x2E        // Various test settings
-
 // Strobe commands
 #define CCxxx0_SRES         0x30        // Reset chip.
 #define CCxxx0_SFSTXON      0x31        // Enable and calibrate frequency synthesizer (if MCSM0.FS_AUTOCAL=1).
-                                        // If in RX/TX: Go to a wait state where only the synthesizer is
-                                        // running (for quick RX / TX turnaround).
+// If in RX/TX: Go to a wait state where only the synthesizer is
+// running (for quick RX / TX turnaround).
 #define CCxxx0_SXOFF        0x32        // Turn off crystal oscillator.
 #define CCxxx0_SCAL         0x33        // Calibrate frequency synthesizer and turn it off
-                                        // (enables quick start).
+// (enables quick start).
 #define CCxxx0_SRX          0x34        // Enable RX. Perform calibration first if coming from IDLE and
-                                        // MCSM0.FS_AUTOCAL=1.
+// MCSM0.FS_AUTOCAL=1.
 #define CCxxx0_STX          0x35        // In IDLE state: Enable TX. Perform calibration first if
-                                        // MCSM0.FS_AUTOCAL=1. If in RX state and CCA is enabled:
-                                        // Only go to TX if channel is clear.
+// MCSM0.FS_AUTOCAL=1. If in RX state and CCA is enabled:
+// Only go to TX if channel is clear.
 #define CCxxx0_SIDLE        0x36        // Exit RX / TX, turn off frequency synthesizer and exit
-                                        // Wake-On-Radio mode if applicable.
+// Wake-On-Radio mode if applicable.
 #define CCxxx0_SAFC         0x37        // Perform AFC adjustment of the frequency synthesizer
 #define CCxxx0_SWOR         0x38        // Start automatic RX polling sequence (Wake-on-Radio)
 #define CCxxx0_SPWD         0x39        // Enter power down mode when CSn goes high.
@@ -81,7 +80,7 @@ Description : This module contains the low level operations for CC1101
 #define CCxxx0_SFTX         0x3B        // Flush the TX FIFO buffer.
 #define CCxxx0_SWORRST      0x3C        // Reset real time clock.
 #define CCxxx0_SNOP         0x3D        // No operation. May be used to pad strobe commands to two
-                                        // INT8Us for simpler software.
+// INT8Us for simpler software.
 
 #define CCxxx0_PARTNUM      0x30
 #define CCxxx0_VERSION      0x31
@@ -100,16 +99,15 @@ Description : This module contains the low level operations for CC1101
 #define CCxxx0_TXFIFO       0x3F
 #define CCxxx0_RXFIFO       0x3F
 
-#define WRITE_BURST     	0x40						//¡¨–¯–¥»Î
-#define READ_SINGLE     	0x80						//∂¡
-#define READ_BURST      	0xC0						//¡¨–¯∂¡
-#define BYTES_IN_RXFIFO     0x7F  						//Ω” ’ª∫≥Â«¯µƒ”––ß◊÷Ω⁄ ˝
-#define CRC_OK              0x80 						//CRC–£—ÈÕ®π˝Œª±Í÷æ
-
+#define WRITE_BURST     	0x40						//ËøûÁª≠ÂÜôÂÖ•
+#define READ_SINGLE     	0x80						//ËØª
+#define READ_BURST      	0xC0						//ËøûÁª≠ËØª
+#define BYTES_IN_RXFIFO     0x7F  						//Êé•Êî∂ÁºìÂÜ≤Âå∫ÁöÑÊúâÊïàÂ≠óËäÇÊï∞
+#define CRC_OK              0x80 						//CRCÊ†°È™åÈÄöËøá‰ΩçÊ†áÂøó
 
 #endif //_CC1101_REH_H_
 /*
-================================================================================
-------------------------------------THE END-------------------------------------
-================================================================================
-*/
+ ================================================================================
+ ------------------------------------THE END-------------------------------------
+ ================================================================================
+ */
