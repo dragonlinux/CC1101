@@ -21,7 +21,7 @@
  */
 //#include "main.h"     //import SPI_ExchangeByte( );
 #include "stm32f10x.h"
-#define CC_CSN_LOW( )   GPIO_ResetBits( GPIOB, GPIO_Pin_12 );while( GPIO_ReadInputDataBit( GPIOB, GPIO_Pin_14 ) == 0 );
+#define CC_CSN_LOW( )   GPIO_ResetBits( GPIOB, GPIO_Pin_12 );while( GPIO_ReadInputDataBit( GPIOB, GPIO_Pin_14 ) != 0 );
 #define CC_CSN_HIGH( )  GPIO_SetBits( GPIOB, GPIO_Pin_12 )
 
 /*
